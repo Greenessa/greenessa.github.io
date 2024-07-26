@@ -11,9 +11,9 @@ html {
     font-size: 16px;
 }
 
-* {
+/* * {
     outline: solid 1px red;;
-}
+} */
 
 .cross {
     position: relative;
@@ -160,28 +160,7 @@ body::after {
   }
 
 
-.answer-yes:checked + .choice-yes::before {
-    background-image: url("../svg/form-circle.svg");
-}
-
-.answer:checked + .choice-no::before {
-    background-image: url("../svg/form-circle.svg");
-}
-
-.choice-no::before {
-    content: "";
-    display: inline-block;
-    /* background-image: url("../svg/form-circle.svg"); */
-    background-image: url("../svg/form-empty-circle.svg");
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-.choice-yes::before {
+.choice::before {
     content: "";
     display: inline-block;
     background-image: url("../svg/form-empty-circle.svg");
@@ -193,6 +172,12 @@ body::after {
     vertical-align: middle;
     margin-right: 8px;
 }
+
+
+input:checked + .choice::before {
+    background-image: url("../svg/form-circle.svg");
+}
+
 
 @media (max-width: 640px) and (orientation: portrait) {
     body {

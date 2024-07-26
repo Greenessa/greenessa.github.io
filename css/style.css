@@ -154,10 +154,25 @@ body::after {
     -moz-appearance: none;
     color: #b59f5b;
 }
+.burger-checkbox:checked ~ .menu-list {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+
+
+.answer-yes:checked + .choice-yes::before {
+    background-image: url("../svg/form-circle.svg");
+}
+
+.answer:checked + .choice-no::before {
+    background-image: url("../svg/form-circle.svg");
+}
+
 .choice-no::before {
     content: "";
     display: inline-block;
-    background-image: url("../svg/form-circle.svg");
+    /* background-image: url("../svg/form-circle.svg"); */
+    background-image: url("../svg/form-empty-circle.svg");
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
